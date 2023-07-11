@@ -39,4 +39,7 @@ to run tests, after running `npm i`, run the command `npm test`
 
 ![UML image](./assets/redux.png)
 
+![UML image](./assets/37.png)
+
+![UML image](./assets/38.png)
 

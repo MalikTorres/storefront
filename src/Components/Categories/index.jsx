@@ -3,30 +3,30 @@ import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import { set } from '../../store/actions';
 
-
 function Categories() {
-  const { categories } = useSelector((state) => state.store)
-
-
+  const { categories } = useSelector((state) => state.categories)
+  // console.log('categories', categories);
   const dispatch = useDispatch();
 
   return (
     <>
-    <h2>Browse our Categories </h2>
-    <ButtonGroup variant='text' aria-label='text button group'>
-      {
-        categories.map((category, index) => (
-          <Button
-            key={`categories-${index}`}
-            onClick={() => dispatch(set(category))}
+      <h2>Browse our Categories</h2>
+      <ButtonGroup variant="text" aria-label="text button group">
+        {
+          categories.map((category, index) => (
+            <Button
+              key={`categories-${index}`}
+              onClick={() => dispatch(set(category))}
             >
-                {category.displayName}
+              {category.displayName}
             </Button>
-        ))
-      }
-    </ButtonGroup>
+          ))
+        }
+      </ButtonGroup>
+
     </>
   )
 }
 
-export default Categories;
+export default Categories
+
